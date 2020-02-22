@@ -2,8 +2,8 @@ from subprocess import Popen, PIPE
 from os import remove
 
 #constants
-XRES = 15
-YRES = 15
+XRES = 500
+YRES = 500
 MAX_COLOR = 255
 RED = 0
 GREEN = 1
@@ -12,6 +12,10 @@ BLUE = 2
 DEFAULT_COLOR = [255, 255, 255]
 
 def new_screen( width = XRES, height = YRES ):
+    global XRES
+    global YRES
+    XRES = width
+    YRES = height
     screen = []
     for y in range( height ):
         row = []
